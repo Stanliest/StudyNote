@@ -55,4 +55,15 @@ estimate the # of pikes in lake soft:
 2. mark and throw them into lake soft
 3. catch a # of pikes, M in lake soft
 4. suppose that M' out of M pikes are found to be marked:  
-Total number of pikes originally in lake soft is: (M-M')*(N/M')
+#### Total number of pikes originally in lake soft is: (M-M')(N/M')  
+if we find many seeded faults and relatively few other, the result can be trusted. Opposite not true.  
+
+Different testing comparison:  
+Functional testing: focus on what, the results of processing behaviour  
+structural testing: focus on the how, implementation algorithms  
+dynamic: execute code, stage is validation, implementation testing  
+static: by inspection, stage is verification, requirements and design  
+exhustive testing: a complete verification, test on every possible condition; this is not practical..   
+static testing: criteria for choosing representative test cases, reasonable test cases.  
+automated testing: the more automated the development process, the easier to automate the test process  
+manual testing: for the project that has greater reliance on people to analyze, document, and develop computer systems manually  
