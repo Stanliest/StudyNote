@@ -178,4 +178,13 @@ each relation represented by mathematical element or model (entity, attribute, m
 * = measurement mapping (M) + the empiricacl and numerical relation systems (dom, range)
 * types: absolute > ratio > interval > ordinal > nominal (> means richer than, the richer, the more restrictive the set of rep)
 * above: "arion" <-- for remembering
-* 
+* scale type: defined by notion of admissible transformation (rescaling)
+* Meaningfulness: a statement with measurement values is meaningful iff its truth value is invariant to admissible transformations.
+* wholeness: is equally or more big (???) than the sum of the parts...
+* **Nonimal scale**: (P, 约等于), P is non-empty countable set, 约等于 is an empirical relation describing ranking properites on P, (R,=) be numerical mathematical structure, u:P-->R be a real value function  
+the admissible transformation is only a one to one transformation  
+* **Ordinal scale**: (P, 大于约等于), same thing but there's transitivity and completeness
+* interval scale: considered empirical distances, obsolate. Don't really understand this part..
+* probably just gonna look at assignment 3
+* **Radio scale**: (P, 大于约等于, o), o is a binary operation on P. Admissible transformation.
+* admissible transformation: if they both have scale of same type.
