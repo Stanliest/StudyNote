@@ -132,3 +132,18 @@ It is impossible to decide whether:
 * condition coverage
 * path coverage: include all the path (if else, loops...)
 * major source of complexity is nested loops
+
+## slide 8 Security testing
+1. software security vulnerabilities:
+* design vulnerabilityes: mistakes in the design that precludes the program from operating securely, no matter how perfectly is is implemented. Found in software's security features.
+* implementation vulnerabilities: caused by security defects in the actual coding (sloppy coding) of the software.
+2. good secure software use principles and techniques:
+* compartmentalization: srong abstractions and interface validations
+* least privilege: granting a user the fewest privileges possible
+* separation of privileges: ensure multiples keys are needed to complete sensitive transactions
+* attack surface reduction: eliminates interfaces that are not necessary to complete its work
+* cryptography: protects data so if one security mechanism falis, the data needs decryption
+3. cryptography: essential
+* communication over an insecure channel
+* securely store password
+* enable session to be securely maintained
