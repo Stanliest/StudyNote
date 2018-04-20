@@ -105,4 +105,30 @@ too much on the correctness.
 7. setup and teardown for every method
 
 ## slide 7 Unit Testing
-1. 
+### theoretical funcdations of unit testing
+1. Theoretical fundations of unit testing (tbh don't think this is on the exam, hopefully)
+2. T is successful for P: P is correct for T if it is correct for all elements in T
+3. test set T is ideal: if whenever P is **incorrect**, there exists a (d in T) such that P is incorrect for d
+* an ideal test set always shows the existence of an error in a program
+4. Conclusion:\
+It is impossible to decide whether:
+* a test is ideal,
+* a criterion is consistent or complete, etc.
+
+### Empirical unit testing principles
+#### complete coverage principle
+1. divide input domain into classes (for ex: {n<0}, {n=0}, 0<n<20, etc)
+2. if classes disjoint, possibility to choose a representitives to minimize # of test cases
+3. basically choose a test set that covers each representitive of sub domain
+4. black-box testing: test without relying on any knowledge of the code or design, only has basis of specification
+5. white-box testing: using the info about the internal structure, maybe ignore specification.
+
+#### statement coverage criterion (white-box)
+* weakness: executing some statement once and oberve it behaves properly is no guarantee that it is correct.
+* each statement in the program is executing at least once
+#### edge coverage criterion (white)
+* some if else then while --> graph
+#### other testing criteria
+* condition coverage
+* path coverage: include all the path (if else, loops...)
+* major source of complexity is nested loops
