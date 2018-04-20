@@ -161,3 +161,21 @@ idiosyncrasy: 特质, notorious: 臭名昭著
 * symbolic linking: files in a file system that point to other files, attacker can create same filename the program is running;
 * directory traversal: allow access to dir that are not below the share dir by using the .. notation to go up a level in the file system
 * there are more pitfalls
+
+## slide 9 The basics of measurement
+### empirical relations
+* data we obtain as measures should represent attributes of the entities
+* empirical (binary) relation: a reasonable consensus about which pairs are in the relation
+* empirical relations NEED NOT be binary
+* Measurement: mapping from the empirical world to the formal world (specify domain, range, rule to perform mapping)
+* Measurement mapping: surjective (could be), neither injective nor surjective (the most of the meas. mapping)
+### representation condition of measurement
+each relation represented by mathematical element or model (entity, attribute, measure)
+### models
+* danger: focus too much on the mathematical system, not enough on empirical one.
+* **Direct measurement** of attribute of an entity involves no other attribute or entity (or reference). (lengh of source code)
+### Measurement scales
+* = measurement mapping (M) + the empiricacl and numerical relation systems (dom, range)
+* types: absolute > ratio > interval > ordinal > nominal (> means richer than, the richer, the more restrictive the set of rep)
+* above: "arion" <-- for remembering
+* 
