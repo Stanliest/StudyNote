@@ -127,7 +127,7 @@ It is impossible to decide whether:
 * weakness: executing some statement once and oberve it behaves properly is no guarantee that it is correct.
 * each statement in the program is executing at least once
 #### edge coverage criterion (white)
-* some if else then while --> graph
+* some if else then while --> graphfla
 #### other testing criteria
 * condition coverage
 * path coverage: include all the path (if else, loops...)
@@ -146,4 +146,18 @@ It is impossible to decide whether:
 3. cryptography: essential
 * communication over an insecure channel
 * securely store password
-* enable session to be securely maintained
+* enable session to be securely maintained  
+pitfall: 陷阱  
+4. input validation (design flaw): buffer overflow, SQL injection, cross-site scripting
+5. structural security (design flaw): large attack surface, running a process at too high a privilege level, no defense in depth, not failing securely  
+idiosyncrasy: 特质, notorious: 臭名昭著  
+6. c/c++ is notorious in security vulnerabilities, program does not keep track of size --> buffer overrun/ overflow
+7. to prevent buffer overflow: limit size of inputs to xxx bytes
+8. scripting languages are less of a risk because they are high level
+9. unix and window shell scripts: often used as quick and easy interfaces
+10. java and c# compile into bytecode and require a virtual machine, MUCH SAFER
+11. however, when managed code calls into NATIVE code using a NATIVE method, the virtual machines can no longer enfore security
+12. plateform: the environment that a program (mainly os) runs inside
+* symbolic linking: files in a file system that point to other files, attacker can create same filename the program is running;
+* directory traversal: allow access to dir that are not below the share dir by using the .. notation to go up a level in the file system
+* there are more pitfalls
