@@ -199,6 +199,7 @@ the admissible transformation is only a one to one transformation
 ### quiz 3
 1. complete criterion: a test set contains inputs that will uncover the error; consistent criterion: to request that any test set gives the same combination of outputs; complete coverage: ensure the input domain is covered 100%.
 ### there are quiz 4 and 5? about unit testing and measurement scales
+1. sql injection: attacker executes malicious sql statements that control web application. Harm: change user info, delete data, 
 
 ## Now look at assignments
 ### assignment 1
