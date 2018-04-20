@@ -183,7 +183,7 @@ each relation represented by mathematical element or model (entity, attribute, m
 * wholeness: is equally or more big (???) than the sum of the parts...
 * **Nonimal scale**: (P, 约等于), P is non-empty countable set, 约等于 is an empirical relation describing ranking properites on P, (R,=) be numerical mathematical structure, u:P-->R be a real value function  
 the admissible transformation is only a one to one transformation  
-* **Ordinal scale**: (P, 大于约等于), same thing but there's transitivity and completeness
+* **Ordinal scale**: (P, 大于约等于), same thing but there's ranking properties, transitivity and completeness
 * interval scale: considered empirical distances, obsolate. Don't really understand this part..
 * probably just gonna look at assignment 3
 * **Radio scale**: (P, 大于约等于, o), o is a binary operation on P. Admissible transformation.
@@ -198,4 +198,16 @@ the admissible transformation is only a one to one transformation
 2. Give boundary values for the input variable and expected output? So yeah, use values around the given values and expected output.
 ### quiz 3
 1. complete criterion: a test set contains inputs that will uncover the error; consistent criterion: to request that any test set gives the same combination of outputs; complete coverage: ensure the input domain is covered 100%.
-### there is quiz 4 and 5? about unit testing and measurement scales
+### there are quiz 4 and 5? about unit testing and measurement scales
+
+## Now look at assignments
+### assignment 1
+1. Know about the test strategy matrix: test factors(data integrity, access control, reliability), test phases(requ, design, coding, unit testing, intration testing, sys/accp testing, maintenance)
+2. test plan (prob not on exam)
+3. just questions
+### assign 2
+JUnit testing, got a pretty high mark on this one. Time complexity was wrong tho.
+### assign 3 (will get tested, 98% sure)
+1. ordinal scale has countable set and ranking properties.
+2. indirect measurement; could have same emirical meaning because they are all increasingly monotonic functions
+3. preventive measures to avoid presence of malware.
