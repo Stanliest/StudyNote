@@ -188,3 +188,14 @@ the admissible transformation is only a one to one transformation
 * probably just gonna look at assignment 3
 * **Radio scale**: (P, 大于约等于, o), o is a binary operation on P. Admissible transformation.
 * admissible transformation: if they both have scale of same type.
+
+## Now look at quiz solutions
+### quiz 1
+1. if an expected result is NOT specified, then it may be difficult to determine if the test has passed or failed.
+2. What is typically the MOST important reason to use risk to drive testing efforts? Testing everything is not feasible: we need to abide by the takeholders budget and time limitations.
+### quiz 2
+1. difference between regression testing and recovery testing? regression is functional, test after a change, the previous unchanged area still functions correctly; Recovery is structural, verifies the ability to restart after integrity has been lost.
+2. Give boundary values for the input variable and expected output? So yeah, use values around the given values and expected output.
+### quiz 3
+1. complete criterion: a test set contains inputs that will uncover the error; consistent criterion: to request that any test set gives the same combination of outputs; complete coverage: ensure the input domain is covered 100%.
+### there is quiz 4 and 5? about unit testing and measurement scales
