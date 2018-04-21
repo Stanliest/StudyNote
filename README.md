@@ -1,5 +1,4 @@
-Notes when studying for exams..
+## Final exam study notes
 
-# Final exam study notes
-
-[3S03 Notes](3S03/README.md)
+[3SO3 Notes](3S03/README.md)\
+[3AO4 Notes](3AO4/README.md)
