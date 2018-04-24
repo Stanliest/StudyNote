@@ -115,3 +115,29 @@ mechanism used to access resources should not be shared
 security mechanisms should not make the resource more difficult to access than if the security mechanisms were not present
 
 ## slide 5: Data flow architecture
+### overview
+* software system decomposed into modules(aka. sub-systems), each module transforms its input data to output data  
+* there is only data connection between modules
+* modifiability and reusability are the property attributes of data flow archi.
+* execution sequence: Batch sequential, pipes, filters
+* pipes are special case of filters
+
+### batch sequential
+* data flow carries a batch of data as a whole to move from one element to another
+* typical application: business data processing (usually shell script)
+* no message on the arrow
+* **benefits**: simple divisions between modules, each module can be stand-alone working on input and output data
+* **limitation**: require external control, low throughput
+
+### pipe and filter
+* flow is directed by data: data source, filters, pipes, data sink
+* connection between components are **data streams**(fifo buffer type)
+* **filter**: independent data stream transformer, write transformed data through pipe to next filter. Does not need to wait for batched data, just working in a local incremental mode
+* **ex**: data(input) --> GZIPOutputStream --compressed data--> CryptOutputStream --compressed and encrypted data--> fileOutputStream --> file(output)
+* **Pipe**: a stateless conduit that moves data stream from one filter to another, can carry binary or character stream. Object type must be serialized (serialization/defalting/marshalling, opposite is deserialization)
+* push only(write only), pull only(read only), pull/push(read|write)
+* active filter, passive filter
+* **benefits**: concurrency, reusability, modifiability(low coupling between filters), simplicity, flexibility
+* **limitation**: not for dynamic interactions, parsing overhead in two consecutive filters, error-handling issues
+
+### process-control architecture
