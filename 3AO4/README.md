@@ -1,4 +1,5 @@
-# Final exam review for 3AO4 Software Design III: Large System Design
+# Exam review: 3AO4 Software Design III: Large System Design
+Look over slides and take notes of key points\
 He said the slides are not substitudes for attending class
 
 ## slide 1 Introduction
@@ -173,3 +174,14 @@ Design principles build on simplicity and restriction
 ### Blackboard
 1. data store is **active**, clients are passive(clients are called knowledge source)
 2. most of software are **knowledge based systems**: voice and image recognition system, security system
+3. two parts: blackboard data store and knowledge sources.
+4. the data change triggers a matched knowledge source
+5. each knowledge source is independent, they collaborate together to solve complex problem with uncertainties
+6. **benefits**: 
+* scalability: easy to add new knowledge source
+* concurrency: all knowledge can work in parallel
+7. **limitations**: 
+* tight dependency between knowledge and blackboard
+* difficult to make a decision when to terminate reasoning
+* synchronization of multiple agents is an issue
+* debugging is challenging
