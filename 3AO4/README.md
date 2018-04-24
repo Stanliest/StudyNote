@@ -141,3 +141,35 @@ Design principles build on simplicity and restriction
 * **limitation**: not for dynamic interactions, parsing overhead in two consecutive filters, error-handling issues
 
 ### process-control architecture
+1. mainly for embedded system software design
+2. two parts:
+* executor processor unit for changing process control variables
+* controller unit for calculating the amounts of the changes
+3. process control data: controlled variable(speed of a cruise), input variable(measured data), manipulated variable(can be adjusted by controller)
+4. Application domain: maintain a stable level for output data
+5. **beneifits**: no precise formula can be used to decide the manipulated variable, software can be completely embedded in the devices
+6. **limitations**: can be unstable and requires a thorough mathematical analysis
+
+## slide 6: data centered software architecture
+### overview
+1. data store is shared by all related software components
+2. system has two parts: data store and software components
+3. two categories: repository and blackboard
+
+### Repository
+1. data store is **passive**, clients of data store is active
+2. widely used in database management system, **library**, computer aided software engineering
+3. clients get data from data store and put data in the store
+4. **Benefits**: 
+* data integrity: easy to backup and restore
+* easy to add new software component(scalability and reusability)
+* reduce overhead of transiend data between software components
+5. **limitations**: 
+* data store reliability & availability are important issues
+* centralized repo is vulnerable to failure
+* high dependency between data structure of data store and its agents
+* change of data has significant impact on agents
+
+### Blackboard
+1. data store is **active**, clients are passive(clients are called knowledge source)
+2. most of software are **knowledge based systems**: voice and image recognition system, security system
