@@ -79,39 +79,39 @@ Steps:
 
 ## slide 4: General Design Principles
 Design principles build on simplicity and restriction  
-### Low coupling and high cohesion principle (where we improve **information hiding**)
+1. Low coupling and high cohesion principle (where we improve **information hiding**)
 * coupling: degree of modules depending directly on other modules
 * cohesion: degree of communication among module's element
 * tight coupling between classes is hard to maintain, improve by new class or inheritance
 * lack of cohesion: a class perform more than one non-related functions, hard to manage
-### Open-closed principle
+2. Open-closed principle
 * open to extension: extend to meet new requirements
 * closed to modification: existing implementation should not be modified as a result of system expansion
-### Liskov substitution principle
+3. Liskov substitution principle
 Substitution for same type or subtype still true.
-### Dependency inversion principle
+4. Dependency inversion principle
 * high level not depend on low level, both levels and details depend on abstraction
 * design to an interface, not to implementation
 * package that is max stable should be max abstract
-### interface segregation principle
+5. interface segregation principle
 if there are two non-cohesive functionalities, keep them separate
-### law of demeter
+6. law of demeter
 a method should have limited knowledge of an object model
-### least privilege (for security, and the following)
+7. least privilege (for security, and the following)
 subject only given privilege it needs to complete its task
-### fail-safe defaults
+8. fail-safe defaults
 subject cannot access object without given access
-### economy of mechanism
+9. economy of mechanism
 security mechanism should be as simple as possible
-### complete mediation
+10. complete mediation
 all access to objects need to be check to ensure they are allowed
-### open design
+11. open design
 security of mechanism should not depend on secrecy of its design or implementation
-### separation of privilege
+12. separation of privilege
 system should not grant permission based on a single condition
-### least common mechanism
+13. least common mechanism
 mechanism used to access resources should not be shared
-### psychological acceptability
+14. psychological acceptability
 security mechanisms should not make the resource more difficult to access than if the security mechanisms were not present
 
 ## slide 5: Data flow architecture
