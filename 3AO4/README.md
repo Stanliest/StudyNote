@@ -230,3 +230,12 @@ Design principles build on simplicity and restriction
 10. **related archit.**: repository, client/server
 
 ### virtual machine
+1. **benefits**: 
+* portability and machine plateform independence
+* simplicity of software development
+* simulation for non-native model
+2. **limitations**:
+* slow execution of the interpreter
+* additional overhead
+3. related archit: interpreter, repository, layered archit.
+
