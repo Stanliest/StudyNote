@@ -250,9 +250,20 @@ Design principles build on simplicity and restriction
 * model-view-controller (MVC)
 
 ### PAC
-1. system decomposed into many cooperating agents
+1. system decomposed into many cooperating **agents**, developed from MVC
 2. each agent has three components(presentation, abstraction, and control)
 3. no direct connections between abstraction component and presentation component, controll component do the communication
+4. each agent has its specific job
+5. **benefits**: 
+* support multi-tasking/viewing
+* support agent reusability and extensibility
+* easy to plug in new agent or replace
+* support concurrency
+6. **limitations**:
+* overhead due to control bridge and communications between many agents
+* hard to determine # of agents
+* development complexivity
+7. related archit: layered, multi-tier, MVC
 
 ### MVC
 1. most web application(online shopping, online survey, etc)
@@ -260,6 +271,17 @@ Design principles build on simplicity and restriction
 * controller: control sequence of user interaction, manages initialization and registration
 * model module: DOES NOT depend on other modules, provides core functional services
 * view module: displays data, updates interface
+3. Suitable for interactive app(multiple views), clear division between M, V, and C
+4. **benefits**: 
+* many MVC vendor frameworks available
+* multiple view synchronized with same data model
+* easy to update views and interfaces
+* very effective for development
+5. **limitations**:
+* does not fit agent-oriented app
+* multiples views and controllers make data model expensive
+* division between view and controller is not very clear in some case
+6. related archit: PAC, implicit invocation archit.
 #### MVC-I
 * simple version: two modules: controller/view, and model
 * diagram: controller/view --subscribes--> model
