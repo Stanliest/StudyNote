@@ -340,3 +340,27 @@ Design principles build on simplicity and restriction
 2. strong demand for low cost and quick system
 3. SOA integration technology that provides a unified archit. for high reusability
 
+## slide 10: heterogeneous architecture
+1. large scale project need multiple architecture styles
+2. depending on requirements and their priorities, and constraints, to choose the "optimal"
+3. system quality attributes: score of a design: +(score * weightOfAttribute)
+4. SAAM
+
+## slide 11: software product families and product families algebra
+1. product family: a set of products that share common hardware or software artefacts such as requirements, properties, middleware, or code (both hardware and software)
+2. feature modelling:
+* G = (V, E)
+* FODA: a tree
+* FORM: a tree with AND/OR
+* FeatuRSEB: a tree with XOR (mutual exclu. constraint)
+* generative programming: parent-children with filled circle(mandatory)
+* ...
+3. product family algebra: 
+* monoid: (S,+,0)
+* semiring: (S,+,0,.,1)
+* an idempotent commutative is semiring --> and this is a product family algebra..
+* +: choice between optionalities of products and features
+* .: mandatory presence
+* LOL this is too complicated
+* F = a * b * (c + 1) --> +1 expresses optinality of c
+* above becomes F = a * b * c + a * b, so there are two products/features
