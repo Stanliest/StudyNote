@@ -336,3 +336,7 @@ Design principles build on simplicity and restriction
 * scalability
 
 ### enterprise service bus (ESB)
+1. enterprise info system requires highly adaptable and highly flexible system architecture
+2. strong demand for low cost and quick system
+3. SOA integration technology that provides a unified archit. for high reusability
+
