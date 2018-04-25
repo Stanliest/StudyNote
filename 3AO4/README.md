@@ -52,10 +52,10 @@ Steps:
 1. describe software archi. formally(ADL: archi. description lang) or informally(UML: objecte-oriented solution)
 2. block diagrams (box and line)
 3. "4+1" view model (UML)
-* logical view
-* process view
-* development view
-* physical view
+* logical view: (ex)use case diagram
+* process view: activity diagram
+* development view: package diagram
+* physical view: deployment diagram
 * user interface view
 ### UML 
 1. structural(static) and behavioral(dynamic)
