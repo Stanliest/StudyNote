@@ -364,3 +364,7 @@ Design principles build on simplicity and restriction
 * LOL this is too complicated
 * F = a * b * (c + 1) --> +1 expresses optinality of c
 * above becomes F = a * b * c + a * b, so there are two products/features
+
+## diagrams
+![GitHub Logo](/images/diagrams.png)
+Format: ![Alt Text](url)
