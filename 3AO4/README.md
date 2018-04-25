@@ -239,3 +239,31 @@ Design principles build on simplicity and restriction
 * additional overhead
 3. related archit: interpreter, repository, layered archit.
 
+## slide 8: interaction oriented software architecture
+### overview
+1. three partitions:
+* data module
+* flow control module
+* view presentation module
+2. two categories:
+* presentation-abstraction-control (PAC)
+* model-view-controller (MVC)
+
+### PAC
+1. system decomposed into many cooperating agents
+2. each agent has three components(presentation, abstraction, and control)
+3. no direct connections between abstraction component and presentation component, controll component do the communication
+
+### MVC
+1. most web application(online shopping, online survey, etc)
+2. summary:
+* controller: control sequence of user interaction, manages initialization and registration
+* model module: DOES NOT depend on other modules, provides core functional services
+* view module: displays data, updates interface
+#### MVC-I
+* simple version: two modules: controller/view, and model
+* diagram: controller/view --subscribes--> model
+#### MVC-II
+* view and controller subscribe to model
+* can have multiples of controller and views, each controller can have many views
+* **model connects to database**
