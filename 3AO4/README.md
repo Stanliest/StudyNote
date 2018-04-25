@@ -366,5 +366,4 @@ Design principles build on simplicity and restriction
 * above becomes F = a * b * c + a * b, so there are two products/features
 
 ## diagrams
-![GitHub Logo](/images/diagrams.png)
-Format: ![Alt Text](url)
+![alt text](http://url/to/diagrams.jpg)
