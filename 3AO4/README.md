@@ -185,3 +185,48 @@ Design principles build on simplicity and restriction
 * difficult to make a decision when to terminate reasoning
 * synchronization of multiple agents is an issue
 * debugging is challenging
+
+## slide 7: Hierarchy architecture
+### overview
+1. modules at different levels are connected by explicit method invocations
+2. three layers:
+* lower level: provides more specific fundamental utility service
+* middle layer: all business logic or core processing services
+* upper layer: provides interface
+* (Each layer is supported by its lower layer and provides service interface to its upper layer)
+3. HA is characterized by explicit method invocation (call-and-return) connection styles
+
+### Main/subroutine software architecture
+1. purpose: max reuse of subroutines and make individual subroutine be developed independently
+2. system decomposition depends on secrets (... hiding)
+3. **benefits**: easy to decompose, can still be used in a sub-system of OO design
+4. **limitation**: 
+* globally shared data are vulnerable
+* tight coupling cause ripple impacts
+
+### Master/slaves software architecture
+1. a variant of main/subroutine, supports fault tolerance and **system reliability**
+2. suitable for **parallel computing**, and accuracy of computing, slaves executed in parallel
+
+### layered architecture
+1. higher and lower layers of classes and modules
+2. request from higher layer to lower layer via method invocation, goes back via method return
+3. each layer: up interface (provide services to its upper layer) and low interface(..)
+4. higher layer provides more generic and abstract service
+5. lower layer provides more specific
+6. jar file includes all service classes from all layers
+7. a simple software system has two layers:
+* interaction layer(interface)
+* processing layer(business logic)
+8. **benefits**:
+* increamental software dev based on increaing levels of abstraction
+* enhanced independence of layers
+* enhanced reusability
+9. **limitaions**:
+* lower runtime performance (a request go through many layers)
+* overhead on data
+* many app don't fit this archit.
+* exception and error handling is an issue
+10. **related archit.**: repository, client/server
+
+### virtual machine
