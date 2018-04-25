@@ -289,3 +289,50 @@ Design principles build on simplicity and restriction
 * view and controller subscribe to model
 * can have multiples of controller and views, each controller can have many views
 * **model connects to database**
+
+## slide 9: distributed architecture
+### overview
+1. data, software, user are distributed
+2. Topology, mode
+
+### client/server
+1. advantages:
+* separation of responsibilities
+* reusability of server components
+2. disadvantages:
+* lack of heterogeneous structure to deal with changes
+* security complications
+* server availability
+* testability
+* fat/thin client
+
+### multi-tier
+1. front tier(UI), middle tier(business logic), back tier(database)
+2. advantages: reusability, scalability, reduces traffic on network
+3. disadv: complex testability
+
+### broker architectual style
+1. middleware, for communication
+2. brokering, forwarding requests
+3. **better decoupling between clients and servers**
+4. proxy-based system. Proxy handles communication
+5. stub(client-proxy), skeleton(server-proxy), broker, and bridges(optional, connect brokers)
+6. advan:
+* server location transparancy
+* changability and extensibility
+* simplicity for client access server
+* reusability
+7. disadv:
+* inefficiency due to overhead of proxies
+* low fault-tolerance
+* difficault in testing
+
+### Service-oriented architecture (SOA)
+1. advan: 
+* loosely-coupled connection
+* each service component is independent
+* interoperability
+* reusability: any service can be reused by any other services
+* scalability
+
+### enterprise service bus (ESB)
