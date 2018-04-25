@@ -366,4 +366,4 @@ Design principles build on simplicity and restriction
 * above becomes F = a * b * c + a * b, so there are two products/features
 
 ## diagrams
-![alt text](http://url/to/diagrams.jpg)
+![](image/diagrams.jpg)
