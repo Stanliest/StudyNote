@@ -7,15 +7,15 @@ Containers are processes running in isolation, achieved with Linux namespaces an
 * control groups(cgroups): limit an application to specific set of resources
 
 ### Run a container
-1. run container:  
+1. run container:\
 `docker container run -t ubuntu top`
     1. Using the ubuntu image, which provide the file system and tools available on ubuntu system
     2. Container **does not** have its own kernal, it's using the kernal of the host
 
-2. get id of running containers:  
+2. get id of running containers:\
 `docker container ls` (in a separate terminal)
 
-3. inspect the container:  
+3. inspect the container:\
 `docker container exec -it [container id] bash`
     1. enter the running container's namespace with a new process
     2. -it: run using interactive mode
@@ -27,19 +27,19 @@ Containers are processes running in isolation, achieved with Linux namespaces an
 `<ctrl>-c`
 
 ### Run multiple containers
-Run an NGINX server:  
-`docker container run --detach --publish 8080:80 --name nginx nginx`  
+Run an NGINX server:\
+`docker container run --detach --publish 8080:80 --name nginx nginx`\
 * --detach: run container in the background  
 * --publish: publishes port 80 in container using port 8080 on your host, this flag is a feature that can expose networking through the container onto the host. Why 80? It's the default port for NGINX in official doc in docker store.
 * --name: names the container   
 
-Run mongo database:
+Run mongo database:\
 `docker container run --detach --publish 8081:27017 --name mongo mongo:3.4`
 
 ### Remove the containers
-1. Stop containers:  
-`docker container stop [container id]` .
-2. Remove stopped containers: (remove dangling images, containers, volumes, and networks)  
+1. Stop containers:\
+`docker container stop [container id]`
+2. Remove stopped containers: (remove dangling images, containers, volumes, and networks)\
 `docker system prune`
 
 ## Docker Images
@@ -64,10 +64,10 @@ This line copies the app.py file in the local directory (where you will run dock
 
 [Dockerfile Reference](https://docs.docker.com/engine/reference/builder/)
 
-2. Build the docker image  
+2. Build the docker image\
 `docker image build -t python-hello-world .`
 
-3. Run the docker image  
+3. Run the docker image\
 `docker run -p 5001:5000 -d python-hello-world`
     1. **-p**: maps the Python app running on port 5000 inside the container to port 5001 on the host.
 
