@@ -29,9 +29,11 @@ Containers are processes running in isolation, achieved with Linux namespaces an
 ### Run multiple containers
 Run an NGINX server:  
 `docker container run --detach --publish 8080:80 --name nginx nginx`  
-    1. --detach: run container in the background
-    2. --publish: publishes port 80 in container using port 8080 on your host, this flag is a feature that can expose networking through the container onto the host. Why 80? It's the default port for NGINX in official doc in docker store.
-    3. --name: names the container
+* --detach: run container in the background  
+* --publish: publishes port 80 in container using port 8080 on your host, this flag is a feature that can expose networking through the container onto the host. Why 80? It's the default port for NGINX in official doc in docker store.
+* --name: names the container   
+Run mongo database:
+`docker container run --detach --publish 8081:27017 --name mongo mongo:3.4`
 
 ### Remove the containers
 1. Stop containers:  
