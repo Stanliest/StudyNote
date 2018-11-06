@@ -66,7 +66,7 @@ This line copies the app.py file in the local directory (where you will run dock
 
 2. Build the docker image\
 `docker image build -t python-hello-world .`\
-Adding a tag to the image:
+Adding a tag to the image:\
 `docker image build -t python-hello-world:latest .`
 
 3. Run the docker image\
