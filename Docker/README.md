@@ -43,7 +43,7 @@ Run mongo database:\
 `docker system prune`
 
 ## Docker Images
-1. ***Dockerfile***
+1. *Dockerfile*
 ```
 FROM python:3.6.1-alpine
 RUN pip install flask
@@ -65,7 +65,7 @@ This line copies the app.py file in the local directory (where you will run dock
 [Dockerfile Reference](https://docs.docker.com/engine/reference/builder/)
 
 2. Build the docker image\
-`docker image build -t python-hello-world .`
+`docker image build -t python-hello-world .`\
 Adding a tag to the image:
 `docker image build -t python-hello-world:latest .`
 
