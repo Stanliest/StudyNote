@@ -66,6 +66,8 @@ This line copies the app.py file in the local directory (where you will run dock
 
 2. Build the docker image\
 `docker image build -t python-hello-world .`
+Adding a tag to the image:
+`docker image build -t python-hello-world:latest .`
 
 3. Run the docker image\
 `docker run -p 5001:5000 -d python-hello-world`
@@ -83,3 +85,4 @@ docker push [username]/python-hello-world
 docker image build -t [username]/python-hello-world .
 docker push [username]/python-hello-world
 ```
+**Note**: if the change is very small, docker might cache the change when deploying through the same image. Need to rebuild the docker image with a different name.
