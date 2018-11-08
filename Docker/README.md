@@ -86,3 +86,21 @@ docker image build -t [username]/python-hello-world .
 docker push [username]/python-hello-world
 ```
 **Note**: if the change is very small, docker might cache the change when deploying through the same image. Need to rebuild the docker image with a different name.
+
+## Container orchestration
+1. Create swarm\
+`docker swarm init --advertise-addr eth0`\
+`docker node ls`
+
+2. Deploy service\
+A service is an abstraction that represents multiple containers of the same image deployed across a distributed cluster.\
+i. Deploy a service by using NGINX:\
+`docker service create --detach=true --name nginx1 --publish 80:80  --mount source=/etc/hostname,target=/usr/share/nginx/html/index.html,type=bind,ro nginx:1.12
+pgqdxr41dpy8qwkn6qm7vke0q`\
+* --mount: to have NGINX print out the hostname of the node it's running on
+* --publish: uses the swarm's built-in routing mesh. In this case, port 80 is exposed on every node in the swarm
+
+3. Inspect the serice\
+`docker service ls`
+
+4. 
