@@ -88,19 +88,45 @@ docker push [username]/python-hello-world
 **Note**: if the change is very small, docker might cache the change when deploying through the same image. Need to rebuild the docker image with a different name.
 
 ## Container orchestration
+### Create swarm
 1. Create swarm\
 `docker swarm init --advertise-addr eth0`\
 `docker node ls`
 
-2. Deploy service\
+### Deploy your first service
+1. Deploy service\
 A service is an abstraction that represents multiple containers of the same image deployed across a distributed cluster.\
 i. Deploy a service by using NGINX:\
-`docker service create --detach=true --name nginx1 --publish 80:80  --mount source=/etc/hostname,target=/usr/share/nginx/html/index.html,type=bind,ro nginx:1.12
-pgqdxr41dpy8qwkn6qm7vke0q`\
+`docker service create --detach=true --name nginx1 --publish 80:80  --mount source=/etc/hostname,target=/usr/share/nginx/html/index.html,type=bind,ro nginx:1.12`\
 * --mount: to have NGINX print out the hostname of the node it's running on
 * --publish: uses the swarm's built-in routing mesh. In this case, port 80 is exposed on every node in the swarm
 
-3. Inspect the serice\
+2. Inspect the services\
 `docker service ls`
 
-4. 
+3. Inspect the running task/running instance of the service\
+`docker service ps nginx1`
+
+4. Send a request\
+`curl localhost:80`
+
+### Scale your service
+In production, you might need to handle large amounts of traffic to your application, so you'll learn how to scale.\
+
+1. Update service with updated number of replicas\
+`docker service update --replicas=5 --detach=true nginx1 nginx1`
+
+2. Check the aggregated logs for the service\
+`Check the aggregated logs for the service`
+
+### Rolling update service
+1. Update nginx to 1.13\
+`docker service update --image nginx:1.13 --detach=true nginx1`\
+Use `docker service ps nginx1` over and over to see the update in real time
+
+### Reconcile problems with containers
+The inspect-and-then-adapt model of Docker Swarm enables it to perform reconciliation when something goes wrong.
+
+### Determine how many nodes you need
+Only managers can maintain the state of the swarm and accept commands to modify it. Workers have high scalability and are only used to run containers.\\
+You should have at least three manager nodes but typically no more than seven. 3/5/7 manager nodes tolerate 1/2/3 node failure. It is possible to have an even number of manager nodes, but it adds no value in terms of the number of node failures. The more manager nodes you have, the harder it is to achieve a consensus on the state of a cluster. Worker nodes can scale up into the thousands of nodes. 
