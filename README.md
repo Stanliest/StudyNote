@@ -1,4 +1,4 @@
-## Final exam study notes
+## Study notes
 
 ### 3rd year 2nd term
 [3AO4 Notes](3AO4/README.md)
